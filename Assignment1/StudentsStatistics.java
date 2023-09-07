@@ -19,6 +19,10 @@ public class StudentsStatistics
         // initialise instance variables
         x = 0;
     }
+    
+    public void inputAssignmentName() {
+        
+    }
 
     /**
      * An example of a method - replace this comment with your own
