@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 public class StudentsStatistics
 {
-    // instance variables - replace the example below with your own
+    // instance variables 
     private int x;
     private String assignmentName;
 
@@ -18,16 +18,18 @@ public class StudentsStatistics
     public StudentsStatistics()
     {
         // initialise instance variables
-        
+
     }
 
     public void inputAssignmentName() {
         
+        //create a Scanner object
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please Enter Assignment Name:");
+        
+        //Read User Input
         assignmentName = userInput.nextLine();
-        System.out.println("Assignment name is " + assignmentName);
+        System.out.println("Assignment Name :" + assignmentName);
     }
-
 
 }
