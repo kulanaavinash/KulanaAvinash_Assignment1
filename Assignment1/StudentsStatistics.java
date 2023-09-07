@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 /**
  * This is a program to compute statistics of students marks in an assignment.
@@ -19,9 +20,11 @@ public class StudentsStatistics
         // initialise instance variables
         x = 0;
     }
-    
+
     public void inputAssignmentName() {
-        
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please Enter Assignment Name:");
+        assignmentName = userInput.nextLine();
     }
 
     /**
