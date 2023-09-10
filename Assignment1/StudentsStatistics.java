@@ -24,19 +24,30 @@ public class StudentsStatistics
     }
 
     public void inputAssignmentName() {
-        
+
         //create a Scanner object
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please Enter Assignment Name:");
-        
+
         //Read User Input
         assignmentName = userInput.nextLine();
         System.out.println("Assignment Name :" + assignmentName);
     }
-     public void inputStudentMarks() {
-         
-        
+
+   public void getStudentMarks(){
+        Scanner userInput = new Scanner(System.in);  // Create a Scanner object
+        boolean validInput = false;   
+        while (!validInput) {
+            System.out.println("Please Enter Student Mark for the Assignment : ");
+             int mark = userInput.nextInt(); // Read user input
+           if (mark >= 0 && mark <= 30){
+                System.out.println("StudentMark: " + mark);
+                validInput=true;
+
+            }else{
+                System.out.println("Invalid mark. Please enter a mark between 0 and 30");
+                
+            }
+        }
+    }   
     }
-
-
-}
