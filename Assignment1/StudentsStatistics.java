@@ -68,4 +68,17 @@ public class StudentsStatistics
 
         System.out.println("Highest Mark: " + highestMark);
     }
+    
+     public void getLowestMarks() {
+
+        int lowestMark = studentMarks.get(0);
+
+        for (int mark : studentMarks) {
+            if (mark < lowestMark) {
+                lowestMark = mark;
+            }
+        }
+
+        System.out.println("Lowest Mark: " + lowestMark);
+    }
 }
