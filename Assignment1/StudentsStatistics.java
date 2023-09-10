@@ -19,6 +19,7 @@ public class StudentsStatistics
     public StudentsStatistics()
     {
         // initialise instance variables
+        assignmentName = "";
         studentMarks = new ArrayList<>();
 
     }
