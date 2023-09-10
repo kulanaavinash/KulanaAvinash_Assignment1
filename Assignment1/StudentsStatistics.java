@@ -90,5 +90,13 @@ public class StudentsStatistics
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + stdDev);
     }
+    
+    public static void main(String[] args) {
+        StudentsStatistics statistics = new StudentsStatistics();
+        statistics.inputAssignmentName();
+        statistics.getStudentMarks();
+        statistics.getHighestAndLowestMarks();
+        statistics.calMeanAndStdDev();
+    }
 
 }
