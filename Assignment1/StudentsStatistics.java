@@ -72,4 +72,22 @@ public class StudentsStatistics
         System.out.println("Highest Mark: " + highestMark);
         System.out.println("Lowest Mark: " + lowestMark);
     }
+
+    public void calMeanAndStdDev() {
+        int sum = 0;
+        for (int mark : studentMarks) {
+            sum += mark;
+        }
+        double mean = (double) sum / studentMarks.size();
+
+        double sumOfSquaredDifferences = 0.0;
+        for (int mark : studentMarks) {
+            double difference = mark - mean;
+            sumOfSquaredDifferences += difference * difference;
+        }
+        double stdDev = Math.sqrt(sumOfSquaredDifferences / studentMarks.size());
+
+        System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation: " + stdDev);
+    }
 }
