@@ -49,7 +49,23 @@ public class StudentsStatistics
                     System.out.println("Invalid mark. Please enter a mark between 0 and 30");
 
                 }
+
             }
+
         }
+
     }   
+
+    public void getHighestMarks() {
+        int highestMark = studentMarks.get(0);
+
+        for (int mark : studentMarks) {
+            if (mark > highestMark) {
+                highestMark = mark;
+            }
+
+        }
+
+        System.out.println("Highest Mark: " + highestMark);
+    }
 }
