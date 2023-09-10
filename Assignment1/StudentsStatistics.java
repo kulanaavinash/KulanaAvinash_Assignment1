@@ -29,10 +29,14 @@ public class StudentsStatistics
         //create a Scanner object
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please Enter Assignment Name:");
-
+        
         //Read User Input
         assignmentName = userInput.nextLine();
-        System.out.println("Assignment Name :" + assignmentName);
+       
+    }
+    
+    public void printAssignmentName(){
+         System.out.println("Assignment Name :" + assignmentName);
     }
 
     public void getStudentMarks(){
@@ -43,7 +47,7 @@ public class StudentsStatistics
                 System.out.println("Please Enter Student Mark for the Assignment : " + (i + 1) + ":");
                 int mark = userInput.nextInt(); // Read user input
                 if (mark >= 0 && mark <= 30){
-                    System.out.println("StudentMark: " + mark );
+                    studentMarks.add(mark);
                     validInput=true;
 
                 }else{
@@ -95,9 +99,11 @@ public class StudentsStatistics
     public static void main(String[] args) {
         StudentsStatistics statistics = new StudentsStatistics();
         statistics.inputAssignmentName();
+        statistics.printAssignmentName();
         statistics.getStudentMarks();
         statistics.getHighestAndLowestMarks();
         statistics.calMeanAndStdDev();
+       
     }
 
 }
