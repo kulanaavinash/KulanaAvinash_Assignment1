@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class StudentsStatistics
 {
     // instance variables 
-    private ArrayList<String> studentMarks;
+    private ArrayList<Integer> studentMarks;
     private String assignmentName;
 
     /**
@@ -41,7 +41,7 @@ public class StudentsStatistics
             System.out.println("Please Enter Student Mark for the Assignment : ");
              int mark = userInput.nextInt(); // Read user input
            if (mark >= 0 && mark <= 30){
-                System.out.println("StudentMark: " + mark);
+                System.out.println("StudentMark: " + mark );
                 validInput=true;
 
             }else{
