@@ -40,7 +40,7 @@ public class StudentsStatistics
         for (int i = 0; i < 30; i++) {
             boolean validInput = false;   
             while (!validInput) {
-                System.out.println("Please Enter Student Mark for the Assignment : ");
+                System.out.println("Please Enter Student Mark for the Assignment : " + (i + 1) + ":");
                 int mark = userInput.nextInt(); // Read user input
                 if (mark >= 0 && mark <= 30){
                     System.out.println("StudentMark: " + mark );
@@ -91,7 +91,7 @@ public class StudentsStatistics
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + stdDev);
     }
-    
+
     public static void main(String[] args) {
         StudentsStatistics statistics = new StudentsStatistics();
         statistics.inputAssignmentName();
