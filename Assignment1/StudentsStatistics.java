@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * This is a program to compute statistics of students marks in an assignment.
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class StudentsStatistics
 {
     // instance variables 
-    private int x;
+    private ArrayList<String> studentMarks;
     private String assignmentName;
 
     /**
@@ -18,6 +19,7 @@ public class StudentsStatistics
     public StudentsStatistics()
     {
         // initialise instance variables
+        studentMarks = new ArrayList<>();
 
     }
 
@@ -31,5 +33,10 @@ public class StudentsStatistics
         assignmentName = userInput.nextLine();
         System.out.println("Assignment Name :" + assignmentName);
     }
+     public void inputStudentMarks() {
+         
+        
+    }
+
 
 }
