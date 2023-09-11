@@ -10,8 +10,8 @@ import java.util.ArrayList;
 public class StudentsStatistics
 {
     // instance variables 
-    private ArrayList<Integer> studentMarks;
-    private String assignmentName;
+    private ArrayList<Integer> studentMarks; //array list to store studentmarks
+    private String assignmentName; //to store assignment name
 
     /**
      * Constructor for objects of class StudentsStatistics
@@ -29,16 +29,21 @@ public class StudentsStatistics
         //create a Scanner object
         Scanner userInput = new Scanner(System.in);
         System.out.println("Please Enter Assignment Name:");
-        
+
         //Read User Input
         assignmentName = userInput.nextLine();
-       
-    }
-    
-    public void printAssignmentName(){
-         System.out.println("Assignment Name :" + assignmentName);
+
     }
 
+    //method to print assignment name
+    public void printAssignmentName(){
+        System.out.println("Assignment Name :" + assignmentName);
+    }
+
+    /**
+     * Allows the user to input student marks.
+     * Ensures that marks are between 0 and 30.
+     */
     public void getStudentMarks(){
         Scanner userInput = new Scanner(System.in);  // Create a Scanner object
         for (int i = 0; i < 30; i++) {
@@ -61,6 +66,10 @@ public class StudentsStatistics
 
     }   
 
+    /**
+     * Calculates and prints the highest and lowest marks.
+     */
+
     public void getHighestAndLowestMarks() {
         int highestMark = studentMarks.get(0);
         int lowestMark = studentMarks.get(0);
@@ -78,6 +87,9 @@ public class StudentsStatistics
         System.out.println("Lowest Mark: " + lowestMark);
     }
 
+    /**
+     * Calculates and prints the mean and standard deviation of student marks.
+     */
     public void calMeanAndStdDev() {
         int sum = 0;
         for (int mark : studentMarks) {
@@ -96,6 +108,9 @@ public class StudentsStatistics
         System.out.println("Standard Deviation: " + stdDev);
     }
 
+    /**
+     * The main method to execute the program.
+     */
     public static void main(String[] args) {
         StudentsStatistics statistics = new StudentsStatistics();
         statistics.inputAssignmentName();
@@ -103,7 +118,7 @@ public class StudentsStatistics
         statistics.getStudentMarks();
         statistics.getHighestAndLowestMarks();
         statistics.calMeanAndStdDev();
-       
+
     }
 
 }
